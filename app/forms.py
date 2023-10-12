@@ -2,13 +2,13 @@ from django import forms
 from django.forms import ModelForm
 from .models import *
 
-class Form(forms.ModelForm):
+class ShopForm(forms.ModelForm):
     
     class Meta:
         model = Shop
-        fields = ('shops_name', 'location')
+        fields = ('shops_name', 'location', 'my_provider')
 
-class Provider(forms.ModelForm):
+class ProviderForm(forms.ModelForm):
     
     class Meta:
         model = Provider

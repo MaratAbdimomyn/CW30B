@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Магазины</h3>
+    <ul>
+        {% for i in shops %}
+        <li>Shop: {{ i.shops_name }}. Where: {{ i.location }}. Provider: {% for j in i.my_provider.all %} {{ j.providers_name }} {% endfor %}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
